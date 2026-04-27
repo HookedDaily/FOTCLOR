@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Feoffees of the Common Lands of Rotherham</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #123E65;
+            --secondary: #ED4266;
+            --tertiary: #F3C82E;
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+        .bg-tertiary { background-color: var(--tertiary); }
+        .text-primary { color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .text-tertiary { color: var(--tertiary); }
+
+        .ribbon {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-donate {
+            background-color: var(--secondary);
+            color: #ffffff;
+            font-weight: 800;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-donate:hover {
+            transform: translateY(2px);
+            filter: brightness(1.1);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(18, 62, 101, 0.85), rgba(18, 62, 101, 0.7)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .stat-card {
+            border-bottom: 4px solid var(--tertiary);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--tertiary);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .infographic-icon {
+            background-color: var(--tertiary);
+            color: var(--primary);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .logo-container {
+            height: 60px;
+            width: auto;
+            background: transparent;
+        }
+        
+        .logo-container img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 pt-20">
+
+    <header class="ribbon bg-primary text-white py-3 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <div class="logo-container">
+                <img src="FOTCLOR logo.png" alt="FOTCLOR Logo" onerror="this.src='https://placehold.co/100x100/123E65/FFFFFF?text=FOTCLOR'">
+            </div>
+            <h1 class="hidden md:block font-bold text-lg tracking-tight uppercase">Feoffees of Rotherham</h1>
+        </div>
+        
+        <nav class="hidden lg:flex gap-8 font-medium uppercase text-sm tracking-wide">
+            <a href="#about" class="nav-link">Our History</a>
+            <a href="#impact" class="nav-link">Your Impact</a>
+            <a href="#grants" class="nav-link">Grants</a>
+            <a href="#events" class="nav-link">Get Involved</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <button class="btn-donate px-6 py-2 rounded-full text-sm shadow-lg">
+                <i class="fas fa-heart mr-2"></i>Donate Now
+            </button>
+            <button class="lg:hidden text-2xl" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero-gradient min-h-[80vh] flex items-center text-white text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <span class="inline-block bg-secondary px-4 py-1 rounded text-xs font-bold mb-6 tracking-widest uppercase">Established 1328</span>
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Preserving Rotherham's Future.</h2>
+            <p class="text-xl md:text-2xl mb-10 text-gray-200">For 698 years, we have managed the common lands for the benefit of the people of Rotherham. Today, in 2026, we continue that legacy.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#grants" class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">Apply for a Grant</a>
+                <a href="#about" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition">Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="stat-card bg-gray-50 p-8 text-center rounded-xl">
+                    <div class="infographic-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="text-4xl font-black text-primary mb-2">£45k+</div>
+                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Scholarships Awarded</div>
+                </div>
+                <div class="stat-card bg-gray-50 p-8 text-center rounded-xl">
+                    <div class="infographic-icon"><i class="fas fa-hands-helping"></i></div>
+                    <div class="text-4xl font-black text-primary mb-2">120+</div>
+                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Local Groups Funded</div>
+                </div>
+                <div class="stat-card bg-gray-50 p-8 text-center rounded-xl">
+                    <div class="infographic-icon"><i class="fas fa-tree"></i></div>
+                    <div class="text-4xl font-black text-primary mb-2">400</div>
+                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Acres Preserved</div>
+                </div>
+                <div class="stat-card bg-gray-50 p-8 text-center rounded-xl">
+                    <div class="infographic-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="text-4xl font-black text-primary mb-2">698</div>
+                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Years of Service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="grants" class="bg-primary text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h3 class="text-4xl font-bold mb-6 uppercase">How we make a difference</h3>
+                <div class="space-y-6 text-blue-50">
+                    <div class="flex gap-4 items-start">
+                        <div class="text-tertiary text-2xl mt-1"><i class="fas fa-check-circle"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-1">Education & Youth</h4>
+                            <p class="font-medium">Bursaries for students over 18 pursuing higher education or vocational training.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="text-tertiary text-2xl mt-1"><i class="fas fa-check-circle"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-1">Community Relief</h4>
+                            <p class="font-medium">Fast-acting grants for individuals facing financial hardship.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="text-tertiary text-2xl mt-1"><i class="fas fa-check-circle"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-1">Heritage Preservation</h4>
+                            <p class="font-medium">Protecting green spaces and the historic core of our town.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gray-100/10 h-64 rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-lg border border-white/10">
+                    <i class="fas fa-landmark text-6xl text-tertiary/20 mb-4"></i>
+                    <p class="font-black italic text-lg leading-snug">Serving Rotherham since the 14th century</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80" class="h-64 w-full object-cover rounded-2xl shadow-lg" alt="Community">
+                <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80" class="h-64 w-full object-cover rounded-2xl shadow-lg" alt="Students">
+                <div class="bg-tertiary h-64 rounded-2xl p-8 flex items-center justify-center text-center shadow-lg">
+                    <p class="text-white font-black text-xl italic leading-relaxed">
+                        "non nobis sed omnibus –<br>not for us but for everyone"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-primary text-4xl font-black uppercase tracking-tight mb-12">Latest from Rotherham</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 shadow-md">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800" class="group-hover:scale-105 transition duration-500 w-full h-48 object-cover" alt="News">
+                    </div>
+                    <div class="flex gap-2 text-xs font-bold uppercase tracking-widest mb-1">
+                        <span class="text-secondary">Community</span>
+                        <span class="text-gray-400">|</span>
+                        <span class="text-secondary">3 min read</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary group-hover:text-secondary transition mb-2">Winter Appeal 2026</h4>
+                    <p class="text-gray-600 mt-2 text-sm leading-relaxed line-clamp-2">Providing essential funding for local community groups as demand increases during the winter season.</p>
+                </article>
+
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 shadow-md">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800" class="group-hover:scale-105 transition duration-500 w-full h-48 object-cover" alt="News">
+                    </div>
+                    <div class="flex gap-2 text-xs font-bold uppercase tracking-widest mb-1">
+                        <span class="text-secondary">Education</span>
+                        <span class="text-gray-400">|</span>
+                        <span class="text-secondary">5 min read</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary group-hover:text-secondary transition mb-2">Scholarships 2026/27</h4>
+                    <p class="text-gray-600 mt-2 text-sm leading-relaxed line-clamp-2">Applications are now being accepted for academic bursaries. Applicants must be 18+ to be eligible.</p>
+                </article>
+
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 shadow-md">
+                        <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=800" class="group-hover:scale-105 transition duration-500 w-full h-48 object-cover" alt="News">
+                    </div>
+                    <div class="flex gap-2 text-xs font-bold uppercase tracking-widest mb-1">
+                        <span class="text-secondary">History</span>
+                        <span class="text-gray-400">|</span>
+                        <span class="text-secondary">4 min read</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary group-hover:text-secondary transition mb-2">Old Hall Facade</h4>
+                    <p class="text-gray-600 mt-2 text-sm leading-relaxed line-clamp-2">Detailing our latest restoration efforts to keep Rotherham's history alive in the 21st century.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="py-20 px-6 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12">
+                <h3 class="text-primary text-4xl font-black uppercase tracking-tight mb-2">Get Involved</h3>
+                <div class="h-1 w-20 bg-tertiary"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition">
+                    <div class="h-32 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=800" class="w-full h-full object-cover" alt="Golf">
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Annual Event</span>
+                        <h4 class="text-lg font-bold text-primary mb-2 uppercase">Golf Event</h4>
+                        <p class="text-xs text-gray-600 mb-4">Join us for our annual tournament supporting local youth projects.</p>
+                    </div>
+                    <button class="bg-gray-50 text-primary py-3 text-xs font-bold uppercase hover:bg-tertiary transition">Register</button>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition">
+                    <div class="h-32 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=800" class="w-full h-full object-cover" alt="Christmas">
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Annual Event</span>
+                        <h4 class="text-lg font-bold text-primary mb-2 uppercase">Christmas Doles</h4>
+                        <p class="text-xs text-gray-600 mb-4">A tradition of giving. Distribution of winter aid to local residents.</p>
+                    </div>
+                    <button class="bg-gray-50 text-primary py-3 text-xs font-bold uppercase hover:bg-tertiary transition">Volunteer</button>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition">
+                    <div class="h-32 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Books for Quiz Night">
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Annual Event</span>
+                        <h4 class="text-lg font-bold text-primary mb-2 uppercase">Annual Quiz Night</h4>
+                        <p class="text-xs text-gray-600 mb-4">Test your knowledge and raise funds for the heritage fund.</p>
+                    </div>
+                    <button class="bg-gray-50 text-primary py-3 text-xs font-bold uppercase hover:bg-tertiary transition">Book Table</button>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition">
+                    <div class="h-32 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=800" class="w-full h-full object-cover" alt="Football Trophy">
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <span class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-2 block">Special Event • 2028</span>
+                        <h4 class="text-lg font-bold text-primary mb-2 uppercase">700th Year Anniversary Corporate Cup</h4>
+                        <p class="text-xs text-gray-600 mb-4">A commemorative tournament marking seven centuries of the Feoffees.</p>
+                    </div>
+                    <button class="bg-gray-50 text-primary py-3 text-xs font-bold uppercase hover:bg-tertiary transition">Register Your Interest</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-16 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="md:col-span-2">
+                <div class="logo-container mb-6">
+                    <img src="FOTCLOR logo.png" alt="FOTCLOR Logo" onerror="this.style.display='none'">
+                </div>
+                <p class="text-gray-400 max-w-md mb-6 font-medium">A historic trust supporting Rotherham since 1328.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="h-10 w-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="h-10 w-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary transition"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h6 class="font-bold mb-6 text-tertiary uppercase tracking-widest text-sm">Navigation</h6>
+                <ul class="space-y-4 text-gray-400 text-sm font-bold uppercase">
+                    <li><a href="#about" class="hover:text-white transition">Our History</a></li>
+                    <li><a href="#grants" class="hover:text-white transition">Grants</a></li>
+                    <li><a href="#events" class="hover:text-white transition">Events</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-bold mb-6 text-tertiary uppercase tracking-widest text-sm">Contact</h6>
+                <p class="text-gray-400 font-medium">Moorgate, Rotherham, S60 2EN</p>
+                <p class="text-gray-400 mt-4 font-bold">info@feoffees-rotherham.org.uk</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-gray-800 mt-12 pt-8 text-xs text-gray-500 flex flex-col md:flex-row justify-between uppercase tracking-widest font-bold">
+            <p>&copy; 2026 The Feoffees of the Common Lands of Rotherham. Registered Charity No. 226105.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if(menuBtn) menuBtn.onclick = () => mobileMenu.classList.toggle('hidden');
+    </script>
+</body>
+</html>
