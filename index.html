@@ -52,7 +52,7 @@
         }
 
         .hero-gradient {
-            background: linear-gradient(rgba(18, 62, 101, 0.85), rgba(18, 62, 101, 0.7)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(18, 62, 101, 0.75), rgba(18, 62, 101, 0.65)), url('FOTCLOR staff thing.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -88,14 +88,23 @@
         .infographic-icon {
             background-color: var(--tertiary);
             color: var(--primary);
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .infographic-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
         }
 
         .logo-container {
@@ -138,11 +147,11 @@
         </div>
     </header>
 
-    <section class="hero-gradient min-h-[80vh] flex items-center text-white text-center px-4">
+    <section class="hero-gradient min-h-[85vh] flex items-center text-white text-center px-4">
         <div class="max-w-4xl mx-auto">
             <span class="inline-block bg-secondary px-4 py-1 rounded text-xs font-bold mb-6 tracking-widest uppercase">Established 1328</span>
-            <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Preserving Rotherham's Future.</h2>
-            <p class="text-xl md:text-2xl mb-10 text-gray-200">For 698 years, we have managed the common lands for the benefit of the people of Rotherham. Today, in 2026, we continue that legacy.</p>
+            <h2 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">Preserving Rotherham's Future.</h2>
+            <p class="text-lg md:text-2xl mb-10 text-gray-100">For 698 years, we have managed the common lands for the benefit of the people of Rotherham. Today, in 2026, we continue that legacy.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#grants" class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">Apply for a Grant</a>
                 <a href="#about" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition">Our Story</a>
@@ -150,28 +159,28 @@
         </div>
     </section>
 
-    <section id="impact" class="py-20 px-6 bg-white">
+    <section id="impact" class="py-12 md:py-20 px-4 md:px-6 bg-white">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="stat-card bg-gray-50 p-8 text-center rounded-xl">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                <div class="stat-card bg-gray-50 p-4 md:p-8 text-center rounded-xl">
                     <div class="infographic-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="text-4xl font-black text-primary mb-2">£45k+</div>
-                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Scholarships Awarded</div>
+                    <div class="text-2xl md:text-4xl font-black text-primary mb-1 md:mb-2">£45k+</div>
+                    <div class="text-[10px] md:text-sm font-bold text-gray-500 uppercase tracking-widest">Scholarships</div>
                 </div>
-                <div class="stat-card bg-gray-50 p-8 text-center rounded-xl">
+                <div class="stat-card bg-gray-50 p-4 md:p-8 text-center rounded-xl">
                     <div class="infographic-icon"><i class="fas fa-hands-helping"></i></div>
-                    <div class="text-4xl font-black text-primary mb-2">120+</div>
-                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Local Groups Funded</div>
+                    <div class="text-2xl md:text-4xl font-black text-primary mb-1 md:mb-2">120+</div>
+                    <div class="text-[10px] md:text-sm font-bold text-gray-500 uppercase tracking-widest">Groups Funded</div>
                 </div>
-                <div class="stat-card bg-gray-50 p-8 text-center rounded-xl">
-                    <div class="infographic-icon"><i class="fas fa-tree"></i></div>
-                    <div class="text-4xl font-black text-primary mb-2">400</div>
-                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Acres Preserved</div>
+                <div class="stat-card bg-gray-50 p-4 md:p-8 text-center rounded-xl">
+                    <div class="infographic-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="text-2xl md:text-4xl font-black text-primary mb-1 md:mb-2">50+</div>
+                    <div class="text-[10px] md:text-sm font-bold text-gray-500 uppercase tracking-widest">Annual Gifts</div>
                 </div>
-                <div class="stat-card bg-gray-50 p-8 text-center rounded-xl">
+                <div class="stat-card bg-gray-50 p-4 md:p-8 text-center rounded-xl">
                     <div class="infographic-icon"><i class="fas fa-landmark"></i></div>
-                    <div class="text-4xl font-black text-primary mb-2">698</div>
-                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Years of Service</div>
+                    <div class="text-2xl md:text-4xl font-black text-primary mb-1 md:mb-2">698</div>
+                    <div class="text-[10px] md:text-sm font-bold text-gray-500 uppercase tracking-widest">Years Active</div>
                 </div>
             </div>
         </div>
@@ -186,7 +195,7 @@
                         <div class="text-tertiary text-2xl mt-1"><i class="fas fa-check-circle"></i></div>
                         <div>
                             <h4 class="text-xl font-bold mb-1">Education & Youth</h4>
-                            <p class="font-medium">Bursaries for students over 18 pursuing higher education or vocational training.</p>
+                            <p class="font-medium">Bursaries for students over 16 pursuing higher education or vocational training.</p>
                         </div>
                     </div>
                     <div class="flex gap-4 items-start">
@@ -200,7 +209,7 @@
                         <div class="text-tertiary text-2xl mt-1"><i class="fas fa-check-circle"></i></div>
                         <div>
                             <h4 class="text-xl font-bold mb-1">Heritage Preservation</h4>
-                            <p class="font-medium">Protecting green spaces and the historic core of our town.</p>
+                            <p class="font-medium">Protecting the historic core of our town.</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +257,7 @@
                         <span class="text-secondary">5 min read</span>
                     </div>
                     <h4 class="text-xl font-bold text-primary group-hover:text-secondary transition mb-2">Scholarships 2026/27</h4>
-                    <p class="text-gray-600 mt-2 text-sm leading-relaxed line-clamp-2">Applications are now being accepted for academic bursaries. Applicants must be 18+ to be eligible.</p>
+                    <p class="text-gray-600 mt-2 text-sm leading-relaxed line-clamp-2">Applications are now being accepted for academic bursaries. Applicants must be 16+ to be eligible.</p>
                 </article>
 
                 <article class="group cursor-pointer">
@@ -301,7 +310,7 @@
 
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition">
                     <div class="h-32 bg-gray-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Books for Quiz Night">
+                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Quiz">
                     </div>
                     <div class="p-6 flex-grow">
                         <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Annual Event</span>
@@ -326,16 +335,19 @@
         </div>
     </section>
 
-    <footer class="bg-primary text-white py-16 px-6">
+    <footer id="contact" class="bg-primary text-white py-16 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div class="md:col-span-2">
                 <div class="logo-container mb-6">
-                    <img src="FOTCLOR logo.png" alt="FOTCLOR Logo" onerror="this.style.display='none'">
+                    <img src="FOTCLOR logo.png" alt="FOTCLOR Logo" onerror="this.src='https://placehold.co/100x100/123E65/FFFFFF?text=FOTCLOR'">
                 </div>
                 <p class="text-gray-400 max-w-md mb-6 font-medium">A historic trust supporting Rotherham since 1328.</p>
                 <div class="flex gap-4">
                     <a href="#" class="h-10 w-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary transition"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="h-10 w-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="h-10 w-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="h-10 w-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="h-10 w-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary transition"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div>
@@ -348,7 +360,7 @@
             </div>
             <div>
                 <h6 class="font-bold mb-6 text-tertiary uppercase tracking-widest text-sm">Contact</h6>
-                <p class="text-gray-400 font-medium">Moorgate, Rotherham, S60 2EN</p>
+                <p class="text-gray-400 font-medium">Common Lands Office<br>Moorgate, Rotherham, S60 2EN</p>
                 <p class="text-gray-400 mt-4 font-bold">info@feoffees-rotherham.org.uk</p>
             </div>
         </div>
